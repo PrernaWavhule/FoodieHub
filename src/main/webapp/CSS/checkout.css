@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+body {
+	background: linear-gradient(135deg, #ffb347, #ffcc33);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkout {
+	width: 90%;
+	max-width: 400px;
+	border-radius: 15px;
+	padding: 35px 30px;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+	background-color: white;
+}
+
+.checkout h2 {
+	text-align: center;
+	margin-bottom: 25px;
+	color: #E67E22;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+/* Form */
+.checkout form {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.checkout label {
+	font-weight: 600;
+	font-size: 14px;
+	color: #333;
+}
+
+.checkout input[type="text"], .checkout input[type="tel"], .checkout textarea,
+	.checkout select {
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-size: 15px;
+	outline: none;
+	transition: 0.3s;
+}
+
+.checkout textarea {
+	resize: none;
+	height: 70px;
+}
+
+.checkout input:focus, .checkout textarea:focus, .checkout select:focus
+	{
+	border-color: #E67E22;
+	box-shadow: 0 0 6px rgba(230, 126, 34, 0.3);
+}
+
+/* Submit Button */
+.checkout input[type="submit"] {
+	background-color: #E67E22;
+	color: white;
+	font-weight: 600;
+	font-size: 16px;
+	border: none;
+	border-radius: 8px;
+	padding: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.checkout input[type="submit"]:hover {
+	background-color: #cf711f;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;
+	transform: translateY(30px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+@media ( max-width : 480px) {
+	.checkout {
+		padding: 25px 20px;
+	}
+}

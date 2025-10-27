@@ -1,0 +1,244 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+	color: #2C2C2C;
+}
+
+/* Restaurant style start's here  */
+.page-title {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	padding-left: 1.5%;
+
+}
+
+.search-box {
+	position: absolute;
+	top: 60px;
+	right: 30px;
+	display: flex;
+	align-items: center;
+	width: 300px;
+	justify-content: center;
+	margin: 1rem auto;
+}
+
+.search-box button {
+	position: absolute;
+	right: 40px;
+	top: 20px;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+.search-box button i {
+	color: gray;
+}
+
+.search-box input {
+	margin: 0.5rem auto;
+	width: 100%;
+	padding: 8px 8px 8px 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	font-size: 1.1rem;
+}
+
+#restaurant #resto-container {
+	margin-top: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 0 1rem;
+	justify-items: center;
+}
+
+#resto-container a {
+	text-decoration: none;
+	color: black;
+}
+
+.resto-card {
+	margin: 2rem 0;
+	cursor: pointer;
+	width: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	object-fit: cover;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resto-card:hover {
+	transform: scale(1.01);
+}
+
+.image-box img {
+	width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	display: block;
+	border-radius: 12px 12px 0 0;
+	background-color: #f0f0f0;
+}
+
+/* Grid Layout */
+.card-info {
+	display: grid;
+	grid-template-areas: "name status" "ratings status" "time status"
+		"cuisine status";
+	gap: 5px;
+	padding: 10px;
+}
+
+.name {
+	grid-area: name;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ratings {
+	grid-area: ratings;
+}
+
+.time {
+	grid-area: time;
+}
+
+.status {
+	grid-area: status;
+	text-align: right;
+	font-weight: bold;
+}
+
+.cuisine {
+	grid-area: cuisine
+}
+
+/* Restaurant style end's here  */
+
+/* Menu style start's here  */
+#menu #menu-container {
+	margin-top: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 0 1rem;
+	justify-items: center;
+}
+
+#menu-title {
+	text-align: center;
+}
+
+.menu-card {
+	width: 300px;
+	margin: 2rem 0;
+	border-radius: 10px;
+	overflow: hidden;
+	object-fit: cover;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card:hover {
+	transform: scale(1.01);
+}
+
+.menu-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem 0;
+	padding-bottom: 1em;
+}
+
+.menu-info>* {
+	padding: 0.2rem 0.5rem;
+}
+
+.menu-info i {
+	color: white;
+}
+
+.menu-info button {
+	border: none;
+	background-color: #ff7b00;
+	color: white;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+.menu-info button:hover {
+	background-color: #e86800;
+	cursor: pointer;
+}
+
+/* Menu style end's here */
+
+/* Large Screen (Desktop / Big Monitors) */
+@media ( min-width : 1200px) {
+	#restaurant #resto-container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	#menu #menu-container {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* Laptaop */
+@media ( min-width : 992px) and (max-width: 1199px) {
+	#restaurant #resto-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	#menu #menu-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Tablet (iPad – Landscape Mode) */
+@media ( min-width : 768px) and (max-width: 991px) {
+	#restaurant #resto-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#menu #menu-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Tablet (iPad – Portrait Mode / Large Phones) */
+@media ( min-width : 576px) and (max-width: 767px) {
+	#restaurant #resto-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#menu #menu-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Mobile (Small Phones) */
+@media ( max-width : 575px) {
+	#restaurant #resto-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#menu #menu-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media ( max-width : 997px) {
+	#restaurant .search-box {
+		display: none;
+	}
+	.page-title {
+		text-align: center;
+	}
+	.cart {
+		width: 90%;
+	}
+}
