@@ -27,8 +27,8 @@
 			Cart userCart = (Cart) session.getAttribute("cart");
 			Integer currentRestaurnatId = (Integer) session.getAttribute("restaurantId");
 	
-			if (cart != null && !cart.getItem().isEmpty()) {
-				for (CartItem item : cart.getItem().values()) {
+			if (userCart != null && !userCart.getItem().isEmpty()) {
+				for (CartItem item : userCart.getItem().values()) {
 		%>
 		<div class="cartCard">
 			<p class="itemName">Name : <%=item.getName()%></p>
@@ -72,7 +72,7 @@
 			}
 		%>
 
-		<p class="total">TotalAmount : <%=cart.getTotal()%>
+		<p class="total">TotalAmount : <%=userCart.getTotal()%>
 		
 	</div>
 	
@@ -87,7 +87,7 @@
 	
 
 	<%
-		} else if (cart == null || cart.getItem().isEmpty()) {
+		} else if (userCart == null || userCart.getItem().isEmpty()) {
 	%>
 
 	<img src="images/empty_cart.jpg" alt="cart" width="300px">
