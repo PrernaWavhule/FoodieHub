@@ -24,7 +24,7 @@
 		
 
 		<%
-			Cart cart = (Cart) session.getAttribute("cart");
+			Cart userCart = (Cart) session.getAttribute("cart");
 			Integer currentRestaurnatId = (Integer) session.getAttribute("restaurantId");
 	
 			if (cart != null && !cart.getItem().isEmpty()) {
