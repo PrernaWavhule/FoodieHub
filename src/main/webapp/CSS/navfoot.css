@@ -6,7 +6,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	background-color: #EDA35A;
+	background-color: #FF914D;
 	position: relative;
 	height: 70px;
 }
@@ -37,7 +37,7 @@ nav ul li a {
 }
 
 nav ul li:first-child, nav ul li a:hover {
-	background-color: #D97D55;
+	background-color: #FF7B54;
 	border-radius: 0.5rem;
 }
 
